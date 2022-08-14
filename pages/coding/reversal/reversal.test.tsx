@@ -2,6 +2,10 @@ import { render, screen, fireEvent } from '@testing-library/react';
 
 import Reversal from '../reversal/index';
 
+const anagrams = (stringA, stringB) => {
+  return 'working';
+};
+
 describe('Initial Page View Checks', () => {
   test('check Reversal renders', () => {
     render(<Reversal />);
