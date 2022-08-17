@@ -3,6 +3,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../../styles/Home.module.css';
 
+import Button from '../../components/Button/Button';
+
+const btnLabel: string = 'Test Label';
+
 const About: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -13,7 +17,9 @@ const About: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1>About</h1>
+        <h1>
+          About <Button label={btnLabel} />
+        </h1>
       </main>
 
       <footer className={styles.footer}>

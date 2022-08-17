@@ -1,13 +1,36 @@
 import { MouseEvent } from 'react';
 
-export type Props = {
-  children: string;
-  color?: any;
-  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
-};
+interface ButtonProps {
+  /**
+   * Is this the principal call to action on the page?
+   */
+  primary?: boolean;
+  /**
+   * What background color to use
+   */
+  backgroundColor?: string;
+  /**
+   * How large should the button be?
+   */
+  size?: 'small' | 'medium' | 'large';
+  /**
+   * Button contents
+   */
+  label: string;
+  /**
+   * Optional click handler
+   */
+  onClick?: () => void;
+}
 
-const Button = () => {
-  return <button>Button</button>;
+const Button = ({
+  primary = false,
+  size = 'medium',
+  backgroundColor,
+  label,
+  ...props
+}: ButtonProps) => {
+  return <button>{label}</button>;
 };
 
 export default Button;
